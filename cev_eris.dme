@@ -3139,4 +3139,5 @@
 #include "zzzz_modular_occulus\prosthesis\implementation.dm"
 #include "zzzz_modular_occulus\prosthesis\prosthesis_brands.dm"
 #include "zzzz_modular_occulus\prosthesis\prosthesis_parts.dm"
+#include "zzzzz_durgonious\whitelist_override.dm"
 // END_INCLUDE
