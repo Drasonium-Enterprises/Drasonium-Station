@@ -9,6 +9,7 @@ Thumbs.db
 *.backup
 *.before
 *~Stashed changes
+.vs/
 tools/
 data/
 cfg/
