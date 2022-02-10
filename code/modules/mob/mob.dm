@@ -34,6 +34,8 @@
 		GLOB.living_mob_list += src
 	GLOB.mob_list += src
 	move_intent = decls_repository.get_decl(move_intent)
+	hook_vr("mob_new",list(src)) //VOREStation Code
+
 	. = ..()
 
 /mob/proc/show_message(msg, type, alt, alt_type)//Message, type of message (1 or 2), alternative message, alt message type (1 or 2)

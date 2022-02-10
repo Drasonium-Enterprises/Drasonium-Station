@@ -83,6 +83,7 @@ avoid code duplication. This includes items that may sometimes act as a standard
 	var/surgery_check = can_operate(src, user)
 	if(surgery_check && do_surgery(src, user, I, surgery_check)) //Surgery
 		return TRUE
+	if(attempt_vr(src,"vore_attackby",args)) return //VOREStation Add - The vore, of course.
 	return I.attack(src, user, user.targeted_organ)
 
 // Proximity_flag is 1 if this afterattack was called on something adjacent, in your square, or on your person.

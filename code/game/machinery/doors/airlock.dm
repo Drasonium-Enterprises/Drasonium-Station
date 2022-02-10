@@ -961,6 +961,8 @@ There are 9 wires.
 	if(istype(I, /obj/item/taperoll))
 		return
 	add_fingerprint(user)
+	if (attempt_vr(src,"attackby_vr",list(I, user))) return
+
 
 	//Harm intent overrides other actions
 	if(density && user.a_intent == I_HURT && !I.GetIdCard())

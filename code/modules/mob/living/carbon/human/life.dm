@@ -1097,6 +1097,9 @@
 			else
 				holder.icon_state = "hudsyndicate"
 			hud_list[SPECIALROLE_HUD] = holder
+
+	attempt_vr(src,"handle_hud_list_vr",list()) //VOREStation Add - Custom HUDs.
+
 	hud_updateflag = 0
 
 /mob/living/carbon/human/handle_silent()

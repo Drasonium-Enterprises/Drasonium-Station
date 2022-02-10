@@ -64,7 +64,7 @@
 		if("Reset Machine")
 			usr.unset_machine()
 		else
-			return FALSE
+			return attempt_vr(src,"Click_vr",list(location,control,params)) //VOREStation Add - Additional things.
 	return TRUE
 //--------------------------------------------------close---------------------------------------------------------
 

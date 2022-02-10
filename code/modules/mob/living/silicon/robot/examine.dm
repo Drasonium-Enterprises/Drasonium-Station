@@ -32,6 +32,9 @@
 		//msg += "<span class='deadsay'>It looks completely unsalvageable.</span>\n"
 	if(module_active)
 		msg += "It is wielding \icon[module_active] [module_active].\n"
+
+	msg += attempt_vr(src,"examine_bellies_borg",args) //VOREStation Edit
+
 	msg += "*---------*"
 
 	if(print_flavor_text()) msg += "\n[print_flavor_text()]\n"

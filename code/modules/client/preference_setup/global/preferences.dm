@@ -288,3 +288,25 @@ var/list/_client_preferences_by_type
 	key = "AREA_INFO"
 
 //OCCULUS EDIT END
+
+
+/datum/client_preference/eating_noises
+	description = "Eating Noises"
+	key = "EATING_NOISES"
+
+/datum/client_preference/digestion_noises
+	description = "Digestion Noises"
+	key = "DIGEST_NOISES"
+	
+/datum/client_preference/belch_noises // Belching noises - pref toggle for 'em
+	description = "Burping"
+	key = "BELCH_NOISES"
+
+/datum/client_preference/emote_noises
+	description = "Emote Noises" //MERP
+	key = "EMOTE_NOISES"
+
+/datum/client_preference/whisubtle_vis
+	description = "Whi/Subtles Ghost Visible" 
+	key = "WHISUBTLE_VIS"
+//VOREStation Add End

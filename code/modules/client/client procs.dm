@@ -190,6 +190,9 @@
 		if(config.aggressive_changelog)
 			src.changes()
 
+	hook_vr("client_new",list(src)) //VOREStation Code
+
+
 	if(!tooltips)
 		tooltips = new /datum/tooltip(src)
 

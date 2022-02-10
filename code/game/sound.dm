@@ -62,6 +62,8 @@
 #define ASTEROID CAVE
 #define SPACE UNDERWATER
 
+#define CHANNEL_PREYLOOP 1015	//VORESTATION ADD - Fancy Sound Loop channel
+
 var/list/shatter_sound = list(
 	'sound/effects/Glassbr1.ogg','sound/effects/Glassbr2.ogg','sound/effects/Glassbr3.ogg'
 )
@@ -348,7 +350,8 @@ var/list/rummage_sound = list(\
 
 var/const/FALLOFF_SOUNDS = 0.5
 
-/mob/proc/playsound_local(turf/turf_source, soundin, vol as num, vary, frequency, falloff, is_global, extrarange, override_env, envdry, envwet, use_pressure = TRUE)
+// /mob/proc/playsound_local(turf/turf_source, soundin, vol as num, vary, frequency, falloff, is_global, extrarange, override_env, envdry, envwet, use_pressure = TRUE)
+/mob/proc/playsound_local(turf/turf_source, soundin, vol as num, vary, frequency, falloff, is_global, channel = 0, extrarange, override_env, envdry, envwet, use_pressure = TRUE)
 	if(!src.client || ear_deaf > 0)
 		return
 
@@ -562,9 +565,10 @@ var/const/FALLOFF_SOUNDS = 0.5
 	//Set the next timer handle
 	timer_handle = addtimer(CALLBACK(src, .proc/do_sound, TRUE), nextinterval, TIMER_STOPPABLE)
 
-
-
 /datum/repeating_sound/proc/stop()
 	if (timer_handle)
 		deltimer(timer_handle)
 	qdel(src)
+
+/mob/proc/stop_sound_channel(chan)
+	src << sound(null, repeat = 0, wait = 0, channel = chan)
