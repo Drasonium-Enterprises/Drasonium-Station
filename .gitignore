@@ -19,3 +19,5 @@ __pycache__
 #vscode
 .vscode
 .history
+.vs/
+libmysql.dll
